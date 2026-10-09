@@ -1,0 +1,59 @@
+LOJAPOO — SPRINT 6
+
+POLIMORFISMO: mesma chamada, regras diferentes
+Caderno: R$ 25.00
+Mochila: R$ 115.00
+Caneta: R$ 7.00
+Livro: R$ 58.00
+Fone: R$ 90.00
+Curso Python: R$ 180.00
+E-book: R$ 30.00
+Planilha: R$ 30.00
+Curso Git: R$ 80.00
+Guia de estudos: R$ 10.00
+
+REPRESENTAÇÃO AMIGÁVEL (__str__)
+Físico: Caderno | frete: R$ 5.00 | final: R$ 25.00
+Físico: Mochila | frete: R$ 15.00 | final: R$ 115.00
+Físico: Caneta | frete: R$ 2.00 | final: R$ 7.00
+Físico: Livro | frete: R$ 8.00 | final: R$ 58.00
+Físico: Fone | frete: R$ 10.00 | final: R$ 90.00
+Digital: Curso Python | desconto: 10% | final: R$ 180.00
+Digital: E-book | desconto: 25% | final: R$ 30.00
+Digital: Planilha | desconto: 0% | final: R$ 30.00
+Digital: Curso Git | desconto: 20% | final: R$ 80.00
+Digital: Guia de estudos | desconto: 50% | final: R$ 10.00
+Pedido de Cliente Exemplo | 10 item(ns) | total: R$ 625.00
+
+ORDEM POR PREÇO FINAL (__lt__)
+Caneta: R$ 7.00
+Guia de estudos: R$ 10.00
+Caderno: R$ 25.00
+E-book: R$ 30.00
+Planilha: R$ 30.00
+Livro: R$ 58.00
+Curso Git: R$ 80.00
+Fone: R$ 90.00
+Mochila: R$ 115.00
+Curso Python: R$ 180.00
+
+REPRESENTAÇÃO TÉCNICA (__repr__)
+ProdutoFisico(nome='Caderno', preco='20.00', frete='5.00')
+ProdutoDigital(nome='Curso Python', preco='200.00', desconto='10')
+Pedido(cliente='Cliente Exemplo', email='cliente@example.com', produtos=[ProdutoFisico(nome='Caderno', preco='20.00', frete='5.00'), ProdutoFisico(nome='Mochila', preco='100.00', frete='15.00'), ProdutoFisico(nome='Caneta', preco='5.00', frete='2.00'), ProdutoFisico(nome='Livro', preco='50.00', frete='8.00'), ProdutoFisico(nome='Fone', preco='80.00', frete='10.00'), ProdutoDigital(nome='Curso Python', preco='200.00', desconto='10'), ProdutoDigital(nome='E-book', preco='40.00', desconto='25'), ProdutoDigital(nome='Planilha', preco='30.00', desconto='0'), ProdutoDigital(nome='Curso Git', preco='100.00', desconto='20'), ProdutoDigital(nome='Guia de estudos', preco='20.00', desconto='50')])
+
+ENTRADAS INVÁLIDAS E ESTADO PRESERVADO
+preco: Preço deve estar entre 0 e 1000000000.
+Valor mantido: Decimal('20.00')
+frete: Frete deve estar entre 0 e 1000000000.
+Valor mantido: Decimal('5.00')
+desconto: Desconto deve estar entre 0 e 100.
+Valor mantido: Decimal('10')
+email: E-mail com formato inválido.
+Valor mantido: 'cliente@example.com'
+cliente: Cliente não pode ficar vazio.
+Valor mantido: 'Cliente Exemplo'
+Construção rejeitada: Desconto deve estar entre 0 e 100.
+Inclusão rejeitada: O item deve ser um objeto Produto.
+
+Total após tentativas inválidas: R$ 625.00
